@@ -1,0 +1,157 @@
+
+/*Estilos del header*/
+.header {
+  background: #110923;
+  padding: 1rem 2rem;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* espacio entre el menú y el botón */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  height: 32px;
+}
+
+.header-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0 0 0 auto; /* la clave: empuja el menú hacia la derecha */
+  padding: 0;
+}
+
+.header-links a {
+  color: white;
+  text-decoration: none;
+}
+/*section diseño*/
+
+.section-hero {
+  background-image: url('./assets/fondoheader.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* ===== Variables globales ===== */
+:root {
+  /* Colores */
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-secondary: #64748b;
+  --color-text: #1e1e2f;
+  --color-bg: #ffffff;
+  --color-white: #ffffff;
+
+  /* Tipografía */
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+
+  /* Espaciados */
+  --radius: 8px;
+}
+
+/* Importar tipografía Inter */
+
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.5;
+}
+
+/* ===== Tipografía ===== */
+h1 { font-size: var(--font-size-xl); font-weight: 700; }
+h2 { font-size: 1.5rem; font-weight: 600; }
+p  { font-size: var(--font-size-base); }
+
+/* ===== Botones ===== */
+button {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+.btn-secondary:hover {
+  background: var(--color-secondary);
+  color: white;
+}
+
+/* ===== Navegación (Header) ===== */
+nav a {
+  font-family: var(--font-family);
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}
+
+.small-regular-inter {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.btn-ticket {
+  background: #EC0C8C;
+  color: white;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 999px; /* esto lo hace completamente ovalado/pill */
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-ticket:hover {
+  background: #d10a7c;
+}
+ .hero-badge{
+  color: white;
+ }
+.hero-title{
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 48.89px;
+}
+
+.section-hero{
+  padding: 80px 25px 425px 25px;
+}
