@@ -1,6 +1,6 @@
 import Header from './components/Header';
 import Section from './components/Section';
-import Cronometro from './components/cronometro';
+import Cronometro from './components/Cronometro';
 import Acordion from './components/Acordion';
 import './App.css'
 
