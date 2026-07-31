@@ -410,3 +410,449 @@
     transform: translateX(-50%);
   }
 }
+
+/* ===== Sección Agenda ===== */
+.agenda {
+  background-color: #140a22;
+  padding: 64px 24px 80px;
+}
+
+.agenda__title {
+  color: #ffffff;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 48px);
+  letter-spacing: 0.04em;
+  margin: 0 0 40px;
+}
+
+.agenda__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== Fila (hora + tarjeta) ===== */
+.agenda-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 16px;
+}
+
+/* ===== Bloque de hora ===== */
+.agenda-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+}
+
+.agenda-time__hour {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.agenda-time__period {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+/* ===== Tarjeta de contenido ===== */
+.agenda-card {
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.agenda-card--simple {
+  justify-content: center;
+}
+
+.agenda-card__tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.agenda-card__dot {
+  opacity: 0.6;
+}
+
+.agenda-card__title {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.agenda-card--simple .agenda-card__title {
+  font-size: 18px;
+}
+
+.agenda-card__description {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 4px 0 0;
+  opacity: 0.9;
+}
+
+/* ===== Speaker ===== */
+.agenda-card__speaker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.agenda-card__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.agenda-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.agenda-card__speaker-name {
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0;
+}
+
+.agenda-card__speaker-role {
+  font-size: 11px;
+  margin: 1px 0;
+  opacity: 0.85;
+}
+
+.agenda-card__speaker-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  margin: 0;
+  opacity: 0.75;
+}
+
+/* ===== Temas de color ===== */
+
+/* Lavanda clara: registro, break, cierre */
+.agenda-row--lavender .agenda-time,
+.agenda-row--lavender .agenda-card {
+  background: #e2ddf6;
+  color: #3d2a8c;
+}
+
+/* Rosa muy clara: apertura oficial */
+.agenda-row--pink-light .agenda-time,
+.agenda-row--pink-light .agenda-card {
+  background: #fce4f2;
+  color: #e6217a;
+}
+
+/* Magenta/rosa fuerte */
+.agenda-row--magenta .agenda-time,
+.agenda-row--magenta .agenda-card {
+  background: #ec0c8c;
+  color: #ffffff;
+}
+
+/* Rojo vino oscuro */
+.agenda-row--maroon .agenda-time,
+.agenda-row--maroon .agenda-card {
+  background: #9c1650;
+  color: #ffffff;
+}
+
+/* Morado medio */
+.agenda-row--purple-mid .agenda-time,
+.agenda-row--purple-mid .agenda-card {
+  background: #8d7ce8;
+  color: #ffffff;
+}
+
+/* Violeta oscuro */
+.agenda-row--violet .agenda-time,
+.agenda-row--violet .agenda-card {
+  background: #5a35d6;
+  color: #ffffff;
+}
+
+/* ===== CTA final ===== */
+.agenda__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .agenda-row {
+    grid-template-columns: 90px 1fr;
+    gap: 10px;
+  }
+
+  .agenda-time__hour {
+    font-size: 18px;
+  }
+
+  .agenda-card {
+    padding: 16px;
+  }
+
+  .agenda-card__title {
+    font-size: 14px;
+  }
+}
+
+/* ===== Sección Tickets ===== */
+.tickets {
+  background: radial-gradient(circle at 20% 10%, #d10a7c 0%, #2a0e4d 45%, #1a0b33 100%);
+  padding: 64px 24px 80px;
+  text-align: center;
+}
+
+.tickets__title {
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: clamp(22px, 3.2vw, 30px);
+  line-height: 1.35;
+  margin: 0 0 20px;
+}
+
+.tickets__countdown-label {
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  margin: 0 0 16px;
+}
+
+/* ===== Countdown ===== */
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #170a2e;
+  border-radius: 16px;
+  padding: 20px 32px;
+  margin: 0 auto 24px;
+}
+
+.countdown__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+}
+
+.countdown__number {
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.countdown__label {
+  color: #a99fce;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.countdown__sep {
+  color: #a99fce;
+  font-size: 26px;
+  font-weight: 700;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.tickets__limited {
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  margin: 0 0 40px;
+}
+
+/* ===== Grid de tarjetas ===== */
+.tickets__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* ===== Tarjeta base (Regular) ===== */
+.ticket-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-card__badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ec0c8c;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 6px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.ticket-card__name {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin: 12px 0 4px;
+}
+
+.ticket-card__price {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 40px;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.ticket-card__tax {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-secondary);
+  margin: 2px 0 16px;
+}
+
+.ticket-card__description {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.ticket-card__features {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.ticket-card__features li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.ticket-card__features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ec0c8c;
+  font-weight: 700;
+}
+
+.ticket-card__btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== Tarjeta VIP (destacada) ===== */
+.ticket-card--vip {
+  background: #2a1450;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ticket-card--vip .ticket-card__name,
+.ticket-card--vip .ticket-card__price,
+.ticket-card--vip .ticket-card__description {
+  color: #ffffff;
+}
+
+.ticket-card--vip .ticket-card__tax {
+  color: #c9bce8;
+}
+
+.ticket-card--vip .ticket-card__features li {
+  color: #e8e2f7;
+}
+
+.ticket-card--vip .ticket-card__features li::before {
+  color: #ff3d8f;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .tickets__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown {
+    gap: 8px;
+    padding: 16px 20px;
+  }
+
+  .countdown__unit {
+    min-width: 44px;
+  }
+
+  .countdown__number {
+    font-size: 24px;
+  }
+}

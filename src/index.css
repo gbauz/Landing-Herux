@@ -1,4 +1,3 @@
-
 /*Estilos del header*/
 .header {
   background: #110923;
@@ -154,4 +153,177 @@ nav a {
 
 .section-hero{
   padding: 80px 25px 425px 25px;
+}
+
+/* diseño de componetne speakers*/
+
+.speakers {
+  position: relative;
+  overflow: hidden;
+  background-color: #2a0e4d;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 96px 32px 80px;
+}
+
+.speakers__watermark {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  max-width: 1200px;
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.speakers__content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.speakers__eyebrow {
+  color: #ff3d8f;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.speakers__title {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: clamp(24px, 4vw, 38px);
+  line-height: 1.2;
+  margin: 0 0 56px;
+  max-width: 640px;
+}
+
+.speakers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-card__image-wrap {
+  position: relative;
+  border-radius: 140px 140px 0 0;
+  overflow: hidden; /* antes: visible → causaba que la foto no se recortara en el arco */
+  aspect-ratio: 3 / 4;
+}
+
+.speaker-card__arch-bg {
+  position: absolute;
+  top: -18px;
+  left: -14px;
+  right: -14px;
+  bottom: -18px;
+  border-radius: 160px 160px 0 0;
+  background: linear-gradient(180deg, rgba(196, 130, 255, 0.55), rgba(122, 60, 200, 0.15) 55%, transparent 80%);
+  z-index: 0;
+}
+
+.speaker-card__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 140px 140px 0 0;
+}
+
+.speaker-card__share {
+  position: absolute;
+  z-index: 2;
+  bottom: 14px;
+  right: -6px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #ff3d8f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.speaker-card__share:hover {
+  transform: scale(1.08);
+  background: #e6217a;
+}
+
+.speaker-card__share:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.speaker-card__info {
+  background: #000000; /* fondo negro detrás del nombre y el rol */
+  padding: 16px 14px;
+  text-align: left;
+}
+
+.speaker-card__name {
+  color: #ff3d8f;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.speaker-card__role {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+  .speakers__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .speakers {
+    padding: 64px 20px 56px;
+  }
+
+  .speakers__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .speaker-card__image-wrap {
+    border-radius: 100px 100px 0 0;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .speaker-card__info {
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .speaker-card__share {
+    transition: none;
+  }
 }
