@@ -1,7 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const PREGUNTAS_DEFAULT = [
+interface Pregunta {
+  pregunta: string;
+  respuesta: string;
+}
+
+interface PreguntasFrecuentesProps {
+  titulo?: string;
+  preguntas?: Pregunta[];
+}
+
+const PREGUNTAS_DEFAULT: Pregunta[] = [
   {
     pregunta: "¿Dónde me puedo inscribir?",
     respuesta:
@@ -14,7 +24,8 @@ const PREGUNTAS_DEFAULT = [
   },
   {
     pregunta: "¿Dónde será el evento?",
-    respuesta: "La sede se confirmará junto con tu entrada, vía correo electrónico.",
+    respuesta:
+      "La sede se confirmará junto con tu entrada, vía correo electrónico.",
   },
   {
     pregunta: "¿Cuál es el precio de las entradas?",
@@ -28,7 +39,8 @@ const PREGUNTAS_DEFAULT = [
   },
   {
     pregunta: "¿Se entrega un certificado?",
-    respuesta: "Sí, todos los asistentes reciben un certificado digital de participación.",
+    respuesta:
+      "Sí, todos los asistentes reciben un certificado digital de participación.",
   },
   {
     pregunta: "¿Cuál es la política de cancelación o reembolso?",
@@ -37,20 +49,13 @@ const PREGUNTAS_DEFAULT = [
   },
 ];
 
-/**
- * Sección de preguntas frecuentes en formato acordeón.
- *
- * Props:
- * - titulo: encabezado de la sección
- * - preguntas: array de objetos { pregunta, respuesta }
- */
 export default function PreguntasFrecuentes({
   titulo = "Preguntas frecuentes",
   preguntas = PREGUNTAS_DEFAULT,
-}) {
-  const [abiertaIndex, setAbiertaIndex] = useState(null);
+}: PreguntasFrecuentesProps) {
+  const [abiertaIndex, setAbiertaIndex] = useState<number | null>(null);
 
-  const toggle = (index) => {
+  const toggle = (index: number) => {
     setAbiertaIndex((actual) => (actual === index ? null : index));
   };
 
@@ -61,6 +66,7 @@ export default function PreguntasFrecuentes({
       <div className="faq__lista">
         {preguntas.map((item, index) => {
           const estaAbierta = abiertaIndex === index;
+
           return (
             <div key={index} className="faq-item">
               <button
@@ -69,7 +75,10 @@ export default function PreguntasFrecuentes({
                 onClick={() => toggle(index)}
                 aria-expanded={estaAbierta}
               >
-                <span className="faq-item__pregunta">{item.pregunta}</span>
+                <span className="faq-item__pregunta">
+                  {item.pregunta}
+                </span>
+
                 <ChevronDown
                   className={`faq-item__icono ${
                     estaAbierta ? "faq-item__icono--abierto" : ""
@@ -83,7 +92,9 @@ export default function PreguntasFrecuentes({
                   estaAbierta ? "faq-item__respuesta--abierta" : ""
                 }`}
               >
-                <p className="faq-item__respuesta-texto">{item.respuesta}</p>
+                <p className="faq-item__respuesta-texto">
+                  {item.respuesta}
+                </p>
               </div>
             </div>
           );

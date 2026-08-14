@@ -19,7 +19,7 @@ export default function MapaUbicacion({
         width="100%"
         height={height}
         style={{ border: 0 }}
-        allowFullScreen=""
+        allowFullScreen
         loading="lazy"
         referrerPolicy="strict-origin-when-cross-origin"
       />

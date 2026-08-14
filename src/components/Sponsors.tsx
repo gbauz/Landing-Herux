@@ -28,12 +28,19 @@ const SPONSORS = [
   },
 ];
 
+interface SponsorsProps {
+  eyebrow?: string;
+  question?: string;
+  ctaLabel?: string;
+  onRequestInfo?: () => void;
+}
+
 export default function Sponsors({
   eyebrow = "Impulsados por",
   question = "¿Tu organización desea ser parte?",
   ctaLabel = "Solicitar información",
-  onRequestInfo,
-}) {
+  onRequestInfo = () => {},
+}: SponsorsProps) {
   return (
     <section className="sponsors" aria-labelledby="sponsors-heading">
       <div className="sponsors__inner">
