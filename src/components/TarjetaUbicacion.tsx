@@ -1,4 +1,4 @@
-import React from "react";
+import react from "react";
 
 export default function TarjetaUbicacion({
   nombre = "Salón Turquesa II",
