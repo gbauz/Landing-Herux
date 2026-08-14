@@ -5,6 +5,12 @@ import Acordion from './components/Acordion';
 import Speakers from './components/Speakers';
 import Agenda from './components/Agenda';
 import Tickets from './components/Tickets';
+import Mapa from './components/MapaUbicacion';
+import TarjetaUbicacion from './components/TarjetaUbicacion';
+import PreguntasFrecuentes from './components/PreguntasFrecuentes';
+import Sponsors from './components/Sponsors';
+import Uxdayfooter from './components/uxdayfooter';
+import Footer from './components/Footer';
 import './App.css'
 
 function App() {
@@ -17,6 +23,12 @@ function App() {
       <Speakers/>
       <Agenda/>
       <Tickets/>
+      <Mapa/>
+      <TarjetaUbicacion/>
+      <PreguntasFrecuentes/>
+      <Sponsors/>
+      <Uxdayfooter/>
+      <Footer/>
     </>
   );
 }

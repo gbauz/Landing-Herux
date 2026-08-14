@@ -856,3 +856,833 @@
     font-size: 24px;
   }
 }
+
+/*estilos tarjetaubicacion*/
+.tarjeta-ubicacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 28px;
+  background-color: #161129;
+  font-family: var(--font-family);
+}
+
+.tarjeta-ubicacion__nombre {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.tarjeta-ubicacion__linea {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #9c96b5;
+  line-height: 1.6;
+}
+
+.tarjeta-ubicacion__btn {
+  flex-shrink: 0;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid #6a638a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta-ubicacion__btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #9c96b5;
+}
+
+@media (max-width: 640px) {
+  .tarjeta-ubicacion {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/*estilos preguntasfrecuentes*/
+.faq {
+  background: linear-gradient(135deg, #1a1440 0%, #2d1a6b 30%, #5a1f9e 60%, #8c1fb0 85%, #a020a0 100%);
+  padding: 64px 24px 80px;
+}
+
+.faq__titulo {
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 800;
+  font-size: clamp(24px, 3.5vw, 34px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0 0 40px;
+}
+
+.faq__lista {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.faq-item__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 40px 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-item__pregunta {
+  color: #ffffff;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.faq-item__icono {
+  flex-shrink: 0;
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.faq-item__icono--abierto {
+  transform: rotate(180deg);
+}
+
+.faq-item__respuesta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item__respuesta--abierta {
+  max-height: 300px;
+}
+
+.faq-item__respuesta-texto {
+  margin: 0;
+  padding: 0 4px 20px;
+  color: #d9d2f0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .faq-item__pregunta {
+    font-size: 12.5px;
+  }
+
+  .faq-item__header {
+    padding: 16px 2px;
+  }
+}
+
+/* ==========================================================================
+   Sponsors section
+   Add this block to your global stylesheet (e.g. index.css / globals.css),
+   or keep it as sponsors.css and import it directly in Sponsors.jsx.
+   ========================================================================== */
+
+.sponsors {
+  background: radial-gradient(120% 160% at 50% 0%, #170f2c 0%, #110923 60%);
+  padding: 4rem 1.5rem;
+  color: #f5f4fa;
+  font-family: 'Exo 2', sans-serif; 
+  font-weight: 400;
+}
+
+.sponsors__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sponsors__eyebrow {
+  margin: 0 0 2.5rem;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f5f4fa;
+}
+
+.sponsors__grid {
+  list-style: none;
+  margin: 0 0 3rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2.25rem;
+  column-gap: 4.5rem;
+}
+
+.sponsors__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsors__logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  /* Source logos are white/transparent; this keeps them crisp on the dark bg
+     and lets you drop in non-white logos without extra work. */
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sponsors__item:hover .sponsors__logo {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* Logos that already carry their own brand colors (e.g. the Carrera icon)
+   should skip the white filter. */
+.sponsors__logo--color {
+  filter: none;
+  opacity: 1;
+}
+
+/* Per-logo size tweaks, measured from the reference design so mixed aspect
+   ratios (wordmark-only vs. icon+stacked-text) read at the same visual
+   weight instead of the same raw height. Logos are the hero content here,
+   so they're sized well above the small eyebrow label. */
+.sponsors__logo--smart {
+  height: 44px;
+}
+
+.sponsors__logo--wyndham {
+  height: 23px;
+}
+
+.sponsors__logo--carrera {
+  height: 59px;
+}
+
+.sponsors__logo--universidad {
+  height: 72px;
+}
+
+.sponsors__logo--interaction {
+  height: 62px;
+}
+
+.sponsors__question {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f5f4fa;
+}
+
+.sponsors__cta {
+  appearance: none;
+  background: transparent;
+  border: 1px solid rgba(245, 244, 250, 0.35);
+  color: #f5f4fa;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.sponsors__cta:hover,
+.sponsors__cta:focus-visible {
+  border-color: #f5f4fa;
+  background-color: rgba(245, 244, 250, 0.08);
+}
+
+.sponsors__cta:focus-visible {
+  outline: 2px solid #f5f4fa;
+  outline-offset: 3px;
+}
+
+/* Responsive: tighten spacing on small screens */
+@media (max-width: 640px) {
+  .sponsors {
+    padding: 3rem 1.25rem;
+  }
+
+  .sponsors__grid {
+    row-gap: 2rem;
+    column-gap: 2.5rem;
+  }
+
+  .sponsors__logo--smart {
+    height: 34px;
+  }
+
+  .sponsors__logo--wyndham {
+    height: 18px;
+  }
+
+  .sponsors__logo--carrera {
+    height: 46px;
+  }
+
+  .sponsors__logo--universidad {
+    height: 56px;
+  }
+
+  .sponsors__logo--interaction {
+    height: 48px;
+  }
+}
+
+/* ==========================================================================
+   UX Day hero / CTA banner
+   Add this block to your global stylesheet, or import it directly in
+   UxDayHero.jsx.
+   ========================================================================== */
+
+.ux-day-hero {
+  background:
+    radial-gradient(60% 130% at 26% 0%, #4b26fb 0%, rgba(75, 38, 251, 0) 60%),
+    radial-gradient(65% 110% at 80% 100%, #f9046e 0%, rgba(249, 4, 110, 0) 60%),
+    #1c0f41;
+  padding: 3.5rem 1.5rem;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+
+.ux-day-hero__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ux-day-hero__title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.5rem, 3.4vw, 2.15rem);
+  line-height: 1.25;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.ux-day-hero__description {
+  margin: 0 0 2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+}
+
+.ux-day-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ux-day-hero__btn {
+  appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ux-day-hero__btn--primary {
+  background: #e90174;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(233, 1, 116, 0.45);
+}
+
+.ux-day-hero__btn--primary:hover {
+  background: #ff1585;
+  transform: translateY(-1px);
+}
+
+.ux-day-hero__btn--secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.ux-day-hero__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.ux-day-hero__btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .ux-day-hero {
+    padding: 2.75rem 1.25rem;
+  }
+
+  .ux-day-hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ux-day-hero__btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   UxDayFooter
+   Add this block to your global stylesheet, or import it directly in
+   UxDayFooter.jsx.
+   ========================================================================== */
+
+.ux-day-footer {
+  background:
+    radial-gradient(60% 130% at 26% 0%, #4b26fb 0%, rgba(75, 38, 251, 0) 60%),
+    radial-gradient(65% 110% at 80% 100%, #f9046e 0%, rgba(249, 4, 110, 0) 60%),
+    #1c0f41;
+  padding: 3.5rem 1.5rem;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+
+.ux-day-footer__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ux-day-footer__title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.5rem, 3.4vw, 2.15rem);
+  line-height: 1.25;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.ux-day-footer__description {
+  margin: 0 0 2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+}
+
+.ux-day-footer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ux-day-footer__btn {
+  appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ux-day-footer__btn--primary {
+  background: #e90174;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(233, 1, 116, 0.45);
+}
+
+.ux-day-footer__btn--primary:hover {
+  background: #ff1585;
+  transform: translateY(-1px);
+}
+
+.ux-day-footer__btn--secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.ux-day-footer__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.ux-day-footer__btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .ux-day-footer {
+    padding: 2.75rem 1.25rem;
+  }
+
+  .ux-day-footer__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ux-day-footer__btn {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================================
+   Footer
+   Add this block to your global stylesheet, or import it directly in
+   Footer.jsx.
+   ========================================================================== */
+
+.footer {
+  background: #110923;
+  color: #9c96ac;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  padding: 3rem 1.5rem 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Brand block ------------------------------------------------------------ */
+
+.footer__logo {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__logo-ux {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f5f4fa;
+  letter-spacing: 0.01em;
+}
+
+.footer__logo-day {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #f5f4fa;
+  line-height: 0.9;
+}
+
+.footer__logo-year {
+  font-size: 0.55rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.3em;
+  color: #7a5cf0;
+  margin-top: 0.2rem;
+}
+
+.footer__meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer__meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.footer__meta-icon {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-top: 0.15rem;
+  color: #6c4cf5;
+}
+
+.footer__meta-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__meta-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #9c96ac;
+}
+
+/* Link columns ------------------------------------------------------------ */
+
+.footer__heading {
+  margin: 0 0 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #f5f4fa;
+  text-transform: uppercase;
+}
+
+.footer__heading--spaced {
+  margin-top: 1.6rem;
+}
+
+.footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer__links a,
+.footer__socials a {
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #9c96ac;
+  transition: color 0.15s ease;
+}
+
+.footer__links a:hover,
+.footer__socials a:hover,
+.footer__email:hover {
+  color: #f5f4fa;
+}
+
+.footer__label {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #6b6578;
+}
+
+.footer__email {
+  display: block;
+  margin: 0.3rem 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #d8d4e3;
+  transition: color 0.15s ease;
+}
+
+.footer__socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer__socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__social-icon {
+  width: 15px;
+  height: 15px;
+  color: #6c4cf5;
+}
+
+.footer__social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Bottom bar --------------------------------------------------------------- */
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.1rem 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #6b6578;
+}
+
+.footer__copy {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.footer__organizers {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-left: 0.35rem;
+}
+
+.footer__org {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.68rem;
+  color: #d8d4e3;
+  letter-spacing: 0.01em;
+}
+
+.footer__org--mento {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.footer__org--herux {
+  font-weight: 500;
+}
+
+.footer__org-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: #6c4cf5;
+  display: inline-block;
+}
+
+.footer__org--prisma {
+  color: #e3335c;
+  font-weight: 600;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.footer__org-sub {
+  font-size: 0.5rem;
+  color: #6b6578;
+  letter-spacing: 0.08em;
+}
+
+.footer__legal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer__legal a {
+  transition: color 0.15s ease;
+}
+
+.footer__legal a:hover {
+  color: #f5f4fa;
+}
+
+/* Responsive ---------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.25rem;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2.5rem 1.25rem 0;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
