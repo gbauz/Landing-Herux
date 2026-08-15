@@ -1,5 +1,3 @@
-import react from "react";
-
 export default function TarjetaUbicacion({
   nombre = "Salón Turquesa II",
   lineas = ["Mall del Sol", "Av. Plaza Dañín, Manzana 15", "Guayaquil, Ecuador"],

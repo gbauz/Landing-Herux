@@ -1,4 +1,3 @@
-import react from "react";
 
 // Logos — adjust these paths to wherever you keep static assets in your project
 import smartLogo from "../assets/smart.png";

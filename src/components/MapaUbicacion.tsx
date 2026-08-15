@@ -1,4 +1,3 @@
-import react from "react";
 export default function MapaUbicacion({
   title = "Salón Turquesa, Mall del Sol",
   width = "100%",
