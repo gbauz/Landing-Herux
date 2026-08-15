@@ -1,7 +1,9 @@
 import fondoSpeakers from '../assets/fondo-speakers.png';
 import speakersWatermark from '../assets/speakers.png';
 import Nataliarey from '../assets/Nataliarey.png';
-
+import Monserratmoreno from '../assets/Monserratmoreno.png';
+import Johanvillalba from '../assets/Johanvillalba.png';
+import Carloshernandez from '../assets/carloshernandez.png'
 interface Speaker {
   name: string;
   role: string;
@@ -17,17 +19,17 @@ const speakers: Speaker[] = [
   {
     name: "Montserrat Moreno",
     role: "Especialista en diseño de servicios",
-    photo: Nataliarey,
+    photo: Monserratmoreno,
   },
   {
     name: "Johan Villalba",
     role: "Especialista en experiencia del usuario e inteligencia artificial",
-    photo: Nataliarey,
+    photo: Johanvillalba,
   },
   {
     name: "Carlos Hernández",
     role: "Especialista en experiencia del cliente",
-    photo: Nataliarey,
+    photo: Carloshernandez,
   },
 ];
 
