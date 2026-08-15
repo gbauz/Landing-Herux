@@ -1686,3 +1686,758 @@
     align-items: flex-start;
   }
 }
+
+/*Version mobile*/
+
+/* =========================================================
+   RESPONSIVE MOBILE GENERAL
+   Pegar AL FINAL de tu archivo CSS
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =========================
+     GENERAL
+     ========================= */
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+
+  /* =========================
+     HERO
+     ========================= */
+
+  .section-hero {
+    padding: 50px 20px 45px;
+    background-position: center;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .hero-left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    gap: 1rem;
+  }
+
+  .hero-right {
+    width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .hero-info-list {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-info-item {
+    justify-content: flex-start;
+    font-size: 12px;
+  }
+
+  .hero-organizers {
+    position: static;
+    margin-top: 2.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero-organizers-logos {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+
+  /* =========================
+     CRONÓMETRO
+     ========================= */
+
+  .cronometro {
+    width: 100%;
+    gap: 0.7rem;
+    padding: 1.2rem 0.8rem;
+    flex-wrap: nowrap;
+  }
+
+  .cronometro-item {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cronometro-numero {
+    font-size: 1.8rem;
+  }
+
+  .cronometro-label {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .cronometro-separador {
+    font-size: 1.8rem;
+  }
+
+
+  /* =========================
+     ACORDEÓN
+     ========================= */
+
+  .section-accordion {
+    padding: 45px 20px;
+    gap: 25px;
+  }
+
+  .accordion-title {
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .accordion-container {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .accordion-panel {
+    width: 100%;
+    flex: none;
+    min-height: 62px;
+    border-radius: 14px;
+    display: block;
+  }
+
+  .accordion-panel.is-active {
+    flex: none;
+    min-height: auto;
+  }
+
+  .accordion-collapsed-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .accordion-index {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 20px;
+  }
+
+  .accordion-expanded-content {
+    width: 100%;
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .accordion-panel.is-active .accordion-expanded-content {
+    display: flex;
+  }
+
+  .accordion-big-number {
+    font-size: 56px;
+  }
+
+  .accordion-content-title {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .accordion-content-block {
+    width: 100%;
+  }
+
+  .accordion-content-block li {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+
+  /* =========================
+     MARQUEE
+     ========================= */
+
+  .marquee {
+    padding: 12px 0;
+  }
+
+  .marquee-item {
+    font-size: 11px;
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+
+  /* =========================
+     AGENDA
+     ========================= */
+
+  .agenda {
+    padding: 48px 16px 60px;
+  }
+
+  .agenda__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .agenda__list {
+    gap: 12px;
+  }
+
+  .agenda-row {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .agenda-time {
+    padding: 10px 6px;
+    border-radius: 12px;
+  }
+
+  .agenda-time__hour {
+    font-size: 17px;
+  }
+
+  .agenda-time__period {
+    font-size: 10px;
+  }
+
+  .agenda-card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .agenda-card__title {
+    font-size: 14px;
+  }
+
+  .agenda-card--simple .agenda-card__title {
+    font-size: 15px;
+  }
+
+  .agenda-card__description {
+    font-size: 12px;
+  }
+
+  .agenda-card__speaker {
+    align-items: flex-start;
+  }
+
+  .agenda__cta {
+    margin-top: 30px;
+  }
+
+
+  /* =========================
+     TICKETS
+     ========================= */
+
+  .tickets {
+    padding: 50px 16px 60px;
+  }
+
+  .tickets__title {
+    font-size: 26px;
+  }
+
+  .tickets__limited {
+    margin-bottom: 32px;
+  }
+
+  .tickets__grid {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+    gap: 28px;
+  }
+
+  .ticket-card {
+    padding: 30px 22px;
+  }
+
+  .ticket-card__price {
+    font-size: 36px;
+  }
+
+  .countdown {
+    width: 100%;
+    max-width: 420px;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px 12px;
+  }
+
+  .countdown__unit {
+    min-width: 44px;
+    flex: 1;
+  }
+
+  .countdown__number {
+    font-size: 25px;
+  }
+
+  .countdown__sep {
+    font-size: 22px;
+  }
+
+
+  /* =========================
+     UBICACIÓN
+     ========================= */
+
+  .tarjeta-ubicacion {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 18px;
+  }
+
+  .tarjeta-ubicacion__nombre {
+    font-size: 19px;
+  }
+
+  .tarjeta-ubicacion__linea {
+    font-size: 11px;
+  }
+
+  .tarjeta-ubicacion__btn {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* =========================
+     PREGUNTAS FRECUENTES
+     ========================= */
+
+  .faq {
+    padding: 50px 18px 60px;
+  }
+
+  .faq__titulo {
+    font-size: 27px;
+    margin-bottom: 25px;
+  }
+
+  .faq-item__header {
+    padding: 22px 2px;
+    gap: 12px;
+  }
+
+  .faq-item__pregunta {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .faq-item__respuesta-texto {
+    font-size: 13px;
+    line-height: 1.65;
+    padding-bottom: 20px;
+  }
+
+
+  /* =========================
+     SPONSORS
+     ========================= */
+
+  .sponsors {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .sponsors__eyebrow {
+    font-size: 27px;
+    letter-spacing: 0.09em;
+    margin-bottom: 2rem;
+  }
+
+  .sponsors__grid {
+    width: 100%;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .sponsors__item {
+    max-width: 150px;
+  }
+
+  .sponsors__logo {
+    max-width: 140px;
+  }
+
+
+  /* =========================
+     UX DAY HERO
+     ========================= */
+
+  .ux-day-hero {
+    padding: 3rem 20px;
+  }
+
+  .ux-day-hero__title {
+    font-size: 28px;
+  }
+
+  .ux-day-hero__description {
+    font-size: 14px;
+  }
+
+
+  /* =========================
+     UX DAY FOOTER / CTA
+     ========================= */
+
+  .ux-day-footer {
+    padding: 3rem 20px;
+  }
+
+  .ux-day-footer__title {
+    font-size: 28px;
+  }
+
+  .ux-day-footer__description {
+    font-size: 14px;
+  }
+
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  .footer {
+    padding: 3rem 20px 0;
+  }
+
+  .footer__top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer__bottom {
+    gap: 1.2rem;
+  }
+
+  .footer__legal {
+    gap: 1rem;
+  }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  /* =========================
+     HERO
+     ========================= */
+
+  .section-hero {
+    padding: 42px 16px 40px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-organizers {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  /* =========================
+     CRONÓMETRO
+     ========================= */
+
+  .cronometro {
+    gap: 0.35rem;
+    padding: 1rem 6px;
+  }
+
+  .cronometro-numero {
+    font-size: 1.5rem;
+  }
+
+  .cronometro-separador {
+    font-size: 1.5rem;
+  }
+
+  .cronometro-label {
+    font-size: 8px;
+  }
+
+
+  /* =========================
+     ACORDEÓN
+     ========================= */
+
+  .section-accordion {
+    padding: 40px 15px;
+  }
+
+  .accordion-title {
+    font-size: 21px;
+  }
+
+  .accordion-panel {
+    border-radius: 12px;
+  }
+
+  .accordion-collapsed-label {
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  .accordion-expanded-content {
+    padding: 20px 16px;
+  }
+
+  .accordion-big-number {
+    font-size: 46px;
+  }
+
+
+  /* =========================
+     AGENDA
+     ========================= */
+
+  .agenda {
+    padding: 42px 12px 55px;
+  }
+
+  .agenda__title {
+    font-size: 27px;
+  }
+
+  .agenda-row {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .agenda-time__hour {
+    font-size: 15px;
+  }
+
+  .agenda-card {
+    padding: 13px;
+  }
+
+  .agenda-card__title {
+    font-size: 13px;
+  }
+
+  .agenda-card__tags {
+    font-size: 9px;
+    flex-wrap: wrap;
+  }
+
+
+  /* =========================
+     TICKETS
+     ========================= */
+
+  .tickets {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .tickets__title {
+    font-size: 23px;
+  }
+
+  .countdown {
+    gap: 4px;
+    padding: 15px 6px;
+  }
+
+  .countdown__unit {
+    min-width: 0;
+  }
+
+  .countdown__number {
+    font-size: 21px;
+  }
+
+  .countdown__label {
+    font-size: 8px;
+  }
+
+  .countdown__sep {
+    font-size: 18px;
+  }
+
+  .ticket-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+
+
+  /* =========================
+     FAQ
+     ========================= */
+
+  .faq {
+    padding: 42px 16px 50px;
+  }
+
+  .faq__titulo {
+    font-size: 23px;
+  }
+
+  .faq-item__pregunta {
+    font-size: 14px;
+  }
+
+
+  /* =========================
+     SPONSORS
+     ========================= */
+
+  .sponsors__eyebrow {
+    font-size: 22px;
+  }
+
+  .sponsors__grid {
+    column-gap: 1.5rem;
+  }
+
+
+  /* =========================
+     UX DAY HERO
+     ========================= */
+
+  .ux-day-hero__title {
+    font-size: 24px;
+  }
+
+  .ux-day-hero__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .ux-day-hero__btn {
+    width: 100%;
+  }
+
+
+  /* =========================
+     UX DAY FOOTER
+     ========================= */
+
+  .ux-day-footer__title {
+    font-size: 24px;
+  }
+
+  .ux-day-footer__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .ux-day-footer__btn {
+    width: 100%;
+  }
+
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  .footer {
+    padding: 2.5rem 18px 0;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__copy {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__organizers {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .footer__legal {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
