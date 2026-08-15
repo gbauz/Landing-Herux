@@ -77,7 +77,7 @@ function Header() {
           </ul>
 
           {/* BOTÓN DESKTOP */}
-          <button className="btn-ticket">
+          <button type="button" className="btn-ticket">
             Comprar Ticket
           </button>
 
@@ -89,18 +89,15 @@ function Header() {
             aria-label="Abrir menú"
             aria-expanded={menuAbierto}
           >
-            <Menu size={30} />
+            <Menu size={30} strokeWidth={2.3} />
           </button>
         </nav>
       </header>
 
-      {/* ===============================
-          MODAL MOBILE
-          =============================== */}
-
+      {/* MODAL MOBILE */}
       {menuAbierto && (
         <div className="mobile-menu-overlay">
-          {/* Fondo clickeable */}
+          {/* FONDO */}
           <button
             type="button"
             className="mobile-menu-backdrop"
@@ -108,7 +105,7 @@ function Header() {
             aria-label="Cerrar menú"
           />
 
-          {/* MODAL */}
+          {/* PANEL */}
           <div
             className="mobile-menu-modal"
             role="dialog"
@@ -123,13 +120,18 @@ function Header() {
                 className="mobile-menu-logo"
               />
 
+              {/* BOTÓN X */}
               <button
                 type="button"
                 className="mobile-menu-close"
                 onClick={cerrarMenu}
                 aria-label="Cerrar menú"
               >
-                <X size={27} />
+                <X
+                  className="mobile-menu-close-icon"
+                  size={26}
+                  strokeWidth={2.5}
+                />
               </button>
             </div>
 
@@ -178,7 +180,7 @@ function Header() {
               </li>
             </ul>
 
-            {/* BOTÓN */}
+            {/* FOOTER */}
             <div className="mobile-menu-footer">
               <a
                 href="/tickets"
