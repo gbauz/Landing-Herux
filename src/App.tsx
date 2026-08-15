@@ -9,7 +9,7 @@ import Mapa from './components/MapaUbicacion';
 import TarjetaUbicacion from './components/TarjetaUbicacion';
 import PreguntasFrecuentes from './components/PreguntasFrecuentes';
 import Sponsors from './components/Sponsors';
-import UxDayFooter from "./components/UxDayFooter";
+import UxDayFooter from './components/uxdayfooter';
 import Footer from './components/Footer';
 import './App.css'
 
