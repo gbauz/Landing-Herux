@@ -9,7 +9,7 @@ import Mapa from './components/MapaUbicacion';
 import TarjetaUbicacion from './components/TarjetaUbicacion';
 import PreguntasFrecuentes from './components/PreguntasFrecuentes';
 import Sponsors from './components/Sponsors';
-import Uxdayfooter from './components/uxdayfooter';
+import UxDayFooter from "./components/UxDayFooter";
 import Footer from './components/Footer';
 import './App.css'
 
@@ -27,7 +27,7 @@ function App() {
       <TarjetaUbicacion/>
       <PreguntasFrecuentes/>
       <Sponsors/>
-      <Uxdayfooter/>
+      <UxDayFooter />      
       <Footer/>
     </>
   );
